@@ -1,0 +1,98 @@
+<!doctype html>
+<html><!-- InstanceBegin template="/Templates/template.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta charset="utf-8">
+<title>Central Pickering Family Practice - Homepage</title>
+<link rel="stylesheet" type="text/css" href="stylesheet.css">
+<style type="text/css">
+#slideshow {
+	height: auto;
+	width: auto;
+}
+h1 {
+	font-size: 36px;
+}
+body {
+	background-color: #B2C9FF;
+}
+</style>
+</head>
+
+<body>
+
+<img class="banner" src="Images/PHHC%20logo%20attempt%201.jpg" width="1200" height="500" alt="Banner"/>
+
+<nav id="menubar">
+<ul>
+<li><a href="homepage.html" title="MainLink1">Home</a></li>
+<li><a href="staff.html" title="MainLink2">Medical Staff</a>
+<li><a href="patientinfo.html" title="MainLink3">Patient Information</a></li>
+<li><a href="apptscheduling.html" title="MainLink4">Appointment Scheduling</a></li>
+<li><a href="contactus.html" title="MainLink5">Contact Us</a></li></nav>
+
+<div id="wrapper">
+<!-- InstanceBeginEditable name="LeftWrap\" -->	
+<div id="slideshow">
+<div class="mySlides fade">
+  <img src="Images/image1.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="Images/image2.jpg" style="width:100%">
+</div>
+
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+  </div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex> slides.length) {slideIndex = 1}
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 4000); // Change image every 2 seconds
+}
+</script>
+  
+</div>
+
+<div id="leftcolumn">
+  <p><h1>Welcome to the Pickering Holistic Health Centre!</h1></p>
+  <p>Open since 2008, we have some of the finest family physicians in the Durham Region. In addition, we have an associated pharmacy and walk-in clinic for any additional medical needs you may have.</p>
+  <p>If you're looking for a family physician, please contact us via email, phone, or in person to check for availability. Currently, we have several doctors looking for new patients.</p>
+  <p>Important Patient Information:</p>
+</div>
+<!-- InstanceEndEditable --><!-- InstanceBeginEditable name="RightWrap" -->
+<div id="rightcolumn">
+  <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
+  <div style='overflow:hidden;height:250px;width:400px;'>
+    <div id='gmap_canvas' style='height:250px;width:400px;'></div>
+    <div><small><a href="http://embedgooglemaps.com"> embed google maps</a></small></div>
+    <div><small><a href="https://disclaimergenerator.net">disclaimer generator</a></small></div>
+    <style>
+    #gmap_canvas img{max-width:none!important;background:none!important}
+    </style>
+  </div>
+  <script type='text/javascript'>function init_map(){var myOptions = {zoom:16,center:new google.maps.LatLng(43.8282543,-79.09616260000001),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(43.8282543,-79.09616260000001)});infowindow = new google.maps.InfoWindow({content:'<strong>CPFP</strong><br>1101 Kingston Rd, Pickering, ON L1V 1B5<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
+</div>
+<!-- InstanceEndEditable -->
+</div>
+</body>
+<!-- InstanceEnd --></html>
